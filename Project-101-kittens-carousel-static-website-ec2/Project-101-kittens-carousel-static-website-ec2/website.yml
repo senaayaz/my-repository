@@ -27,7 +27,7 @@ Resources:
       InstanceType: t2.micro
       KeyName: firstkey
       SecurityGroupIds: 
-        - ! Ref WebServerSecurityGroup
+        - !Ref WebServerSecurityGroup
       Tags: 
         - Key: Name
           Value: WebServer-Sena
