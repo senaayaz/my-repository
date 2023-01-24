@@ -1,9 +1,13 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: |
-  CloudFormation Template for Roman Numerals Converter Application.
+  CloudFormation Template for Roman Numerals Web App
 
-# Parameters:
-  
+Parameters:
+
+  KeyPair:
+    Description: Key Pair for EC2 Instance
+    Type: AWS::EC2::KeyPair::KeyName
+
 Resources:
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -25,7 +29,7 @@ Resources:
     Properties:
       ImageId: ami-0b5eea76982371e91
       InstanceType: t2.micro
-      KeyName: firstkey
+      KeyName: !Ref firstkey
       SecurityGroupIds: 
         - !Ref WebServerSecurityGroup
       Tags: 
