@@ -1,9 +1,9 @@
 import boto3
 
 # sts = example
-# sts = boto3.client('sts')
-# response = sts.get_caller_identity()
-# print(response)
+sts = boto3.client('sts')
+response = sts.get_caller_identity()
+print(response)
 
 #s3 example
 # s3 = boto3.resource('s3')
